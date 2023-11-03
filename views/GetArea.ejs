@@ -1,0 +1,10 @@
+<%- include('./partials/_header.ejs')  %>
+
+<% areas.forEach((area)=>{ %>
+
+    <p><%= area.area %></p>
+    <form action="/addadmin/DelArea/<%= area.id %>?_method=DELETE" method="post">
+        <button>刪除</button>
+    </form>
+
+<% }) %>

@@ -1,0 +1,54 @@
+<%- include('./partials/_header.ejs')  %>
+
+
+<form action="/addadmin/PostNursingHomeForm" method="post">
+
+
+<label for="">地區 : </label>
+<select name="InputPlace">
+
+    <% Places.forEach((place)=>{ %>
+        <option value="<%= place.place %>" ><%= place.area  %> - <%= place.place %></option>
+    <% }) %>
+</select>
+
+
+<label for="">院名 : </label>
+<input type="text" name="InputHospitalName" placeholder="院名">
+
+<label for="">價錢 : </label>
+<input type="text" name="InputPrice" placeholder="價錢">
+
+<label for="">服務 : </label>
+<select name="InputServeOption" >
+    <% Services.forEach((service)=>{ %>
+        <option value="<%= service.service %>" >
+            <%= service.service %>
+        </option>
+    <% }) %>
+</select>
+<select name="InputServeOption1" >
+    <% Services.forEach((service)=>{ %>
+        <option value="<%= service.service %>" >
+            <%= service.service %>
+        </option>
+    <% }) %>
+</select>
+<select name="InputServeOption2" >
+    <% Services.forEach((service)=>{ %>
+        <option value="<%= service.service %>" >
+            <%= service.service %>
+        </option>
+    <% }) %>
+</select>
+<select name="InputServeOption3" >
+    <% Services.forEach((service)=>{ %>
+        <option value="<%= service.service %>" >
+            <%= service.service %>
+        </option>
+    <% }) %>
+</select>
+
+<button type="submit"> 提交 </button>
+
+</form>

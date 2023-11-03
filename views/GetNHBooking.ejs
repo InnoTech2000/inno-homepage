@@ -1,0 +1,19 @@
+<%- include('./partials/_header.ejs')  %>
+
+
+<% NHs.forEach((nh)=>{ %>
+    <p>院名 : <%= nh.hospitalname %> </p>
+    <p>地方 : <%= nh.place %> </p>
+    <p>價錢 : <%= nh.price %> </p>
+    <p>服務1 : <%= nh.serve1 %> <br>
+        服務2 : <%= nh.serve2 %> <br>
+        服務3 :<%= nh.serve3 %> <br>
+        服務4 :<%= nh.serve4 %>  <br>      
+    </p>
+
+    <form action="/addadmin/DelNHBooking/<%= nh.id %>?_method=DELETE" method="post" >
+
+        <button>刪除</button>
+    </form>
+
+<% }) %>

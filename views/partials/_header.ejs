@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hands</title>
+
+</head>
+<body>
+
+<nav>
+    <a href="/Auth">Auth</a>
+    <a href="/addadmin/GetAddArea" >新增地區</a>
+    <a href="/addadmin/GetAddPlace" >新增地方</a>
+    <a href="/addadmin/GetAddService">新增服務</a>
+    <a href="/addadmin/GetAddNursingHome" >新增療養院</a>
+
+    <a href="/addadmin/GetArea">地區</a>
+    <a href="/addadmin/GetPlace">地方</a>
+    <a href="/addadmin/GetService">服務</a>
+    <a href="/addadmin/GetNHBooking">療養院</a>
+
+
+
+    <% if (user) { %>
+        <li><a href="/auth/logout">Hi ,<%= user.username %>(logout) </a></li>
+      <% } else { %>  
+    <li><a href="/auth/register">Register</a></li>
+    <li><a href="/auth/login">Log in</a></li>
+    <% } %>
+
+</nav>

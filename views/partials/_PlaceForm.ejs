@@ -1,0 +1,11 @@
+<label for="">地區：</label>
+<select name="InputArea">
+    <% Areas.forEach((area)=>{ %>
+        <option value="<%= area.area  %>"><%= area.area %></option>
+        <% })  %>
+        
+        
+    </select>
+    
+    <label for="">地方：</label>
+    <input type="text" name="InputPlace"  placeholder="18區">

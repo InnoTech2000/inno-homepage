@@ -1,0 +1,8 @@
+<%- include('./partials/_header.ejs')  %>
+
+<% services.forEach((service)=>{ %>
+    <p><%= service.service  %></p>
+    <form action="/addadmin/DelService/<%= service.id %>?_method=DELETE" method="post">
+        <button>刪除</button>
+    </form>
+<% }) %>
