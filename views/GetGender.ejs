@@ -1,0 +1,14 @@
+<%- include('./partials/_header.ejs')  %>
+
+<% genders.forEach((gender)=> {  %>
+
+    <p><%= gender.gender %></p>
+
+    <a href="/addadmin/GetPutGender/<%= gender.id %>">更改</a>
+
+    <form action="/addadmin/DelGender/<%= gender.id %>?_method=DELETE" method="post" >
+        <button>刪除</button>
+    </form>
+
+
+<% }) %>

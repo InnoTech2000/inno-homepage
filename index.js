@@ -32,7 +32,9 @@ app.use(passport.session())
 
 app.get('*',function(req,res,next){
     res.locals.user = req.user || null;
-    console.log('locals user:' + req.user)
+    res.locals.query = req.query
+
+    console.log(req.query)
     next();
 })
 

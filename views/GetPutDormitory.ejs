@@ -1,0 +1,8 @@
+<%- include('./partials/_header.ejs')  %>
+
+<form action="/addadmin/PutDormitoryForm/<%= dormitory.id%>?_method=PUT" method="post">
+
+    <%- include('./partials/_DormitoryPutForm.ejs') %>
+
+<button>Submit</button>
+</form>

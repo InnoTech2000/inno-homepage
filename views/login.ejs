@@ -7,7 +7,6 @@
 
 
 <form action="/auth/login" method="post">
-    <input type="text" name="username" placeholder="username">
-    <input type="text" name="password" placeholder="password">
+    <%- include('./partials/_LoginForm.ejs')  %>
     <button>提交</button>
 </form>

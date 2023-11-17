@@ -1,0 +1,10 @@
+<%- include('./partials/_header.ejs')  %>
+
+
+
+<form action="/addadmin/PutGenderForm/<%= gender._id %>?_method=PUT" method="post">
+    
+    <%- include('./partials/_GenderPutForm.ejs')  %>
+    
+    <button>Submit</button>
+</form>

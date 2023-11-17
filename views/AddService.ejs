@@ -3,7 +3,21 @@
 
 <form action="/addadmin/PostServiceForm" method="post">
 
+    
+    <!-- <label for=""></label>
+    <select name="InputDormitory" id="">
+        <% dormitories.forEach((dormitory)=>{ %>
+            <option value="<%= dormitory.dormitory %>">
+                <%= dormitory.dormitory  %>
+            </option>
+       <% }) %>
+
+    </select> -->
+    
     <%- include('./partials/_ServiceForm.ejs')  %>
+
+
+
 
 <button type="submit">提交</button>
 

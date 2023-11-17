@@ -7,11 +7,17 @@
 <label for="">地區 : </label>
 <select name="InputPlace">
 
-    <% Places.forEach((place)=>{ %>
+    <% places.forEach((place)=>{ %>
         <option value="<%= place.place %>" ><%= place.area  %> - <%= place.place %></option>
     <% }) %>
 </select>
 
+<label for="">街道</label>
+<input type="text" name="InputStreet" placeholder="街道" >
+
+
+<label for="">地址 : </label>
+<textarea name="InputAddress" id="" cols="30" rows="10"></textarea>
 
 <label for="">院名 : </label>
 <input type="text" name="InputHospitalName" placeholder="院名">
@@ -20,34 +26,48 @@
 <input type="text" name="InputPrice" placeholder="價錢">
 
 <label for="">服務 : </label>
-<select name="InputServeOption" >
-    <% Services.forEach((service)=>{ %>
-        <option value="<%= service.service %>" >
-            <%= service.service %>
-        </option>
-    <% }) %>
+
+<select name="InputServiceOption" >
+
+    <% services.forEach((service)=>{ %>
+      <option  value="<%= service.dormitory %> - <%= service.service %> " ><%= service.dormitory %> - <%= service.service %> </option>
+      <% }) %>
+    
 </select>
-<select name="InputServeOption1" >
-    <% Services.forEach((service)=>{ %>
-        <option value="<%= service.service %>" >
-            <%= service.service %>
-        </option>
-    <% }) %>
+<select name="InputServiceOption1" >
+
+    <% services.forEach((service)=>{ %>
+      <option  value="<%= service.dormitory %> - <%= service.service %> " ><%= service.dormitory %> - <%= service.service %> </option>
+      <% }) %>
+    
 </select>
-<select name="InputServeOption2" >
-    <% Services.forEach((service)=>{ %>
-        <option value="<%= service.service %>" >
-            <%= service.service %>
-        </option>
-    <% }) %>
+<select name="InputServiceOption2" >
+
+    <% services.forEach((service)=>{ %>
+      <option  value="<%= service.dormitory %> - <%= service.service %> " ><%= service.dormitory %> - <%= service.service %> </option>
+      <% }) %>
+    
 </select>
-<select name="InputServeOption3" >
-    <% Services.forEach((service)=>{ %>
-        <option value="<%= service.service %>" >
-            <%= service.service %>
-        </option>
-    <% }) %>
+<select name="InputServiceOption3" >
+
+    <% services.forEach((service)=>{ %>
+      <option  value="<%= service.dormitory %> - <%= service.service %> " ><%= service.dormitory %> - <%= service.service %> </option>
+      <% }) %>
+    
 </select>
+        
+<label for="">開放時間 : </label>
+<input type="text" name="InputOpenTime" placeholder="開放時間" >
+
+<label for="">聯絡人</label>
+<input type="text" name="InputContactPerson" placeholder="聯絡人" >
+
+
+<label for="">電話 : </label>
+<input type="text" name="InputPhone" placeholder="電話">
+
+<label for="">房間 :  </label>
+<%- include('./partials/_RoomForm.ejs')  %>
 
 <button type="submit"> 提交 </button>
 

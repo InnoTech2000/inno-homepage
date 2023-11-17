@@ -1,0 +1,79 @@
+<%- include('./partials/_header.ejs')  %>
+
+
+
+<form action="/addadmin/PutNursingHomeForm/<%= nhs._id %>?_method=PUT" method="POST">
+
+
+    <label for="">地區 : </label>
+    <select name="InputPutPlace">
+    
+        <% places.forEach((place)=>{ %>
+            <option value="<%= place.place %>" ><%= place.area  %> - <%= place.place %></option>
+        <% }) %>
+    </select>
+    
+    <label for="">地址 : </label>
+    <textarea name="InputPutAddress"  id="" cols="30" rows="10"><%= nhs.address %></textarea>
+    
+    <label for="">街道</label>
+    <input type="text" name="InputPutStreet" value="<%= nhs.street%>" placeholder="街道" >
+    
+
+    <label for="">院名 : </label>
+    <input type="text" name="InputPutHospitalName"  value="<%= nhs.hospitalname %>"  placeholder="院名">
+    
+    <label for="">價錢 : </label>
+    <input type="text" name="InputPutPrice" placeholder="價錢" value="<%= nhs.price %>">
+    
+
+    <!-- <label for="">服務 : </label>
+    <select name="InputServeOption" >
+        <% services.forEach((service)=>{ %>
+            <option value="<%= service.service %>" >
+                <%= service.service %>
+            </option>
+        <% }) %>
+    </select>
+    <label for="">服務1 : </label>
+    <select name="InputServiceOption1" >
+
+        <% services.forEach((service)=>{ %>
+          <option  value="<%= service.dormitory %> - <%= service.service %> " ><%= service.dormitory %> - <%= service.service %> </option>
+          <% }) %>
+        
+    </select>
+    <label for="">服務2 : </label>
+    <select name="InputServiceOption2" >
+    
+        <% services.forEach((service)=>{ %>
+          <option  value="<%= service.dormitory %> - <%= service.service %> " ><%= service.dormitory %> - <%= service.service %> </option>
+          <% }) %>
+        
+    </select>
+    <label for="">服務3 : </label>
+    <select name="InputServiceOption3" >
+    
+        <% services.forEach((service)=>{ %>
+          <option  value="<%= service.dormitory %> - <%= service.service %> " ><%= service.dormitory %> - <%= service.service %> </option>
+          <% }) %>
+        
+    </select>
+     -->
+
+<label for="">開放時間 : </label>
+<input type="text" name="InputPutOpenTime" placeholder="開放時間" value="nhs.openhour" >
+
+<label for="">聯絡人</label>
+<input type="text" name="InputPutContactPerson" value="nhs.contactperson" placeholder="聯絡人" >
+
+
+    <label for="">電話 : </label>
+    <input type="text" name="InputPutPhone" value="<%= nhs.hospitalphone  %>"  placeholder="電話">
+    
+    <label for="">房間 :  </label>
+    <%- include('./partials/_RoomPutForm.ejs')  %>
+    
+    <button type="submit"> 提交 </button>
+    
+    </form>

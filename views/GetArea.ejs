@@ -4,6 +4,7 @@
 
     <p><%= area.area %></p>
     <form action="/addadmin/DelArea/<%= area.id %>?_method=DELETE" method="post">
+        <a href="/addadmin/GetPutArea/<%= area.id %>">更改</a>
         <button>刪除</button>
     </form>
 

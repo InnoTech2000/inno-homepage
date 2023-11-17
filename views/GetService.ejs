@@ -1,7 +1,10 @@
 <%- include('./partials/_header.ejs')  %>
 
 <% services.forEach((service)=>{ %>
-    <p><%= service.service  %></p>
+    <!-- <p>宿位類型: <%= service.dormitory %></p> -->
+    <p>服務:<%= service.service  %></p>
+    <!-- <p>價錢:$ <%=  parseFloat(service.servicePrice) %>   </p> -->
+    <a href="/addadmin/GetPutService/<%= service.id %>">更改</a>
     <form action="/addadmin/DelService/<%= service.id %>?_method=DELETE" method="post">
         <button>刪除</button>
     </form>

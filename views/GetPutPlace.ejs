@@ -1,0 +1,12 @@
+<%- include('./partials/_header.ejs')  %>
+
+
+
+<form action="/addadmin/PutPlaceForm/<%= place._id%>?_method=PUT" method="post">
+    
+    <%- include('./partials/_PlacePutForm.ejs')  %>
+    
+    <button>Submit</button>
+</form>
+
+

@@ -1,0 +1,18 @@
+<%- include('./partials/_header.ejs')  %>
+
+
+<% dormitorices.forEach((dormitory)=>{ %>
+    <p><%= dormitory.dormitory %></p>
+
+
+    <a href="/addadmin/GetPutDormitory/<%= dormitory.id %>">更改</a>
+
+    <form action="/addadmin/DelDormitory/<%= dormitory.id %>?_method=DELETE" method="post" >
+
+       <button>
+        刪除
+       </button> 
+    </form>
+
+
+<% })  %>

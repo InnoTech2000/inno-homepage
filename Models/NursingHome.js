@@ -7,21 +7,47 @@ const NHSchema = new mongoose.Schema({
     price: {
         type:String
     },
-    serve1: {
+    address: {
         type:String
+    },
+    street: {
+        type:String
+    },
+    serve: {
+        type: String
+    },
+    serve1: {
+        type: String
     },
     serve2: {
-        type:String
+        type: String
     },
     serve3: {
-        type:String
+        type: String
     },
-    serve4: {
-        type:String
+    openhour: {
+        type: Number
+    },
+    multiple: {
+        type: Number
+    },
+    single : {
+        type: Number
+    },
+    public : {
+        type: Number
+    },
+    contactperson : {
+        type: String
     },
     hospitalname: {
         type:String
-    }
+    },
+    hospitalphone : {
+        type:String
+    },
+    some:{},some1:{},some2:{},some3:{},some4:{},some5:{},
+
 
 },{timeseries:true})
 

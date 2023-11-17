@@ -1,0 +1,19 @@
+<label for="">客人名稱 : </label>
+<input type="text" name="Inputname"  placeholder="客人名稱">
+
+<label for="">客人電話 : </label>
+<input type="text" name="Inputphone"  placeholder="客人電話" >
+
+
+
+
+<label for="">醫院 : </label>
+<select name="Inputhospital" id="">
+    <% NHs.forEach((nh)=>{ %>
+        <option value="<%= nh.hospitalname %>- <%= nh.street  %>-<%= nh.place   %>" ><%= nh.hospitalname   %>- <%= nh.street  %>-<%= nh.place   %></option>
+        
+        <% }) %>
+</select>
+
+
+

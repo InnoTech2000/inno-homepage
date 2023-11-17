@@ -8,4 +8,5 @@ Router.get('/Auth',GetAuth)
 Router.get('/home',isUser,GetHome)
 
 
+
 export default Router
