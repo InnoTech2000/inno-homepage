@@ -7,6 +7,13 @@ import passportConfig from './config/passport-local.js';
 import session from "express-session";
 import passport from 'passport';
 
+import {fileURLToPath} from 'url';
+import path from "path";
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+
+
 import { isUser } from './config/auth.js';
 
 
@@ -17,6 +24,9 @@ const app = express();
 app.set('views','./views')
 app.set('view engine','ejs')
 
+
+
+app.use(express.static(__dirname + '/public'))
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.use(methodOverride('_method'))
